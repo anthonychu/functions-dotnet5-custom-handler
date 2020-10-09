@@ -25,11 +25,13 @@ In local.settings.json, add this content and provide the Storage account and Ser
 
 Configure the queue name in MyServiceBusTrigger/function.json to the name of the Service Bus queue to trigger from.
 
-Build the handler.
+Build the handler. (substitute `oxs-x64` with the RID for your OS)
 
 ```bash
 dotnet publish -r osx-x64 /p:PublishSingleFile=true -c Release -o ./Handler ../Handler/Handler.csproj
 ```
+
+Check that host.json has the correct `defaultExecutablePath` set for the handler exe.
 
 Run the app.
 
