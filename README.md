@@ -38,3 +38,5 @@ Run the app.
 ```bash
 func start
 ```
+
+To deploy, make sure you compile the handler for the target OS and adjust host.json as needed.

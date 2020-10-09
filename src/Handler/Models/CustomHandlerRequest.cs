@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Handler
+namespace Handler.Models
 {
     public class CustomHandlerRequest
     {

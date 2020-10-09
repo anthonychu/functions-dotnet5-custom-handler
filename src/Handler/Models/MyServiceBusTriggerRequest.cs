@@ -1,4 +1,4 @@
-﻿namespace Handler
+﻿namespace Handler.Models
 {
     public class MyServiceBusTriggerRequest : CustomHandlerRequest
     {

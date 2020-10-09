@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
+﻿using Handler.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Handler.Controllers
 {
@@ -7,13 +7,6 @@ namespace Handler.Controllers
     [Route("[controller]")]
     public class MyServiceBusTrigger : ControllerBase
     {
-        private readonly ILogger<MyServiceBusTrigger> _logger;
-
-        public MyServiceBusTrigger(ILogger<MyServiceBusTrigger> logger)
-        {
-            _logger = logger;
-        }
-
         [HttpPost]
         public CustomHandlerResponse Post([FromBody]MyServiceBusTriggerRequest request)
         {
