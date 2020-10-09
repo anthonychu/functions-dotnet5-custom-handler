@@ -1,0 +1,19 @@
+{
+  "version": "2.0",
+  "customHandler": {
+    "description": {
+      "defaultExecutablePath": "Handler/Handler",
+      "arguments": [
+        "--urls", "http://localhost:%FUNCTIONS_CUSTOMHANDLER_PORT%"
+      ]
+    }
+  },
+  "extensionBundle": {
+    "id": "Microsoft.Azure.Functions.ExtensionBundle",
+    "version": "[2.*, 3.0.0)"
+  },
+  "logging": {
+    "logLevel": {
+    }
+  }
+}

@@ -1,0 +1,61 @@
+POST http://localhost:5000/MyServiceBusTrigger
+Content-Type: application/json
+
+{
+  "Data": {
+    "myQueueItem": "\"{\\\"hello\\\":\\\"world\\\"}\""
+  },
+  "Metadata": {
+    "MessageReceiver": {
+      "RegisteredPlugins": [],
+      "ReceiveMode": 0,
+      "PrefetchCount": 0,
+      "LastPeekedSequenceNumber": 0,
+      "Path": "myqueue",
+      "OperationTimeout": "00:01:00",
+      "ServiceBusConnection": {
+        "Endpoint": "sb://edp-scale-tests.servicebus.windows.net",
+        "OperationTimeout": "00:01:00",
+        "RetryPolicy": {
+          "MinimalBackoff": "00:00:00",
+          "MaximumBackoff": "00:00:30",
+          "DeltaBackoff": "00:00:03",
+          "MaxRetryCount": 5,
+          "IsServerBusy": false,
+          "ServerBusyExceptionMessage": null
+        },
+        "TransportType": 0,
+        "TokenProvider": {},
+        "IsClosedOrClosing": false
+      },
+      "IsClosedOrClosing": false,
+      "OwnsConnection": true,
+      "ClientId": "MessageReceiver1myqueue",
+      "RetryPolicy": {
+        "MinimalBackoff": "00:00:00",
+        "MaximumBackoff": "00:00:30",
+        "DeltaBackoff": "00:00:03",
+        "MaxRetryCount": 5,
+        "IsServerBusy": false,
+        "ServerBusyExceptionMessage": null
+      }
+    },
+    "DeliveryCount": "1",
+    "LockToken": "\"4223106e-36f4-45ed-b1ab-96ead73e225b\"",
+    "ExpiresAtUtc": "\"2020-10-22T21:49:35.809Z\"",
+    "EnqueuedTimeUtc": "\"2020-10-08T21:49:35.809Z\"",
+    "MessageId": "\"088fb2b9aede42e7a154dbc7f803a566\"",
+    "ContentType": "\"application/json\"",
+    "SequenceNumber": "1",
+    "UserProperties": {
+      "Sec-Fetch-Site": "cross-site",
+      "Sec-Fetch-Mode": "cors"
+    },
+    "sys": {
+      "MethodName": "ServiceBusTrigger",
+      "UtcNow": "2020-10-08T21:49:36.127842Z",
+      "RandGuid": "addfc984-1792-4638-8848-8dea7616962d"
+    },
+    "hello": "\"world\""
+  }
+}
